@@ -1,19 +1,29 @@
-// "use client"
 
-// import * as React from "react"
-// import { Moon, MoonIcon, Sun } from "lucide-react"
-// import { useTheme } from "next-themes"
+// "use client";
 
-// import { Button } from "@/components/ui/button"
+// import  React from "react";
+// import { Sun, Moon } from "lucide-react";
+// import { useTheme } from "next-themes";
+
+// import { Button } from "@/components/ui/button";
 // import {
 //   DropdownMenu,
 //   DropdownMenuContent,
 //   DropdownMenuItem,
 //   DropdownMenuTrigger,
-// } from "@/components/ui/dropdown-menu"
+// } from "@/components/ui/dropdown-menu";
 
 // export function ThemeToggle() {
-//   const { setTheme } = useTheme()
+//   const { theme, setTheme } = useTheme();
+//   const [mounted, setMounted] = React.useState(false); // Add a state to track client-side mounting
+
+//   // Ensure this runs only on the client
+//   React.useEffect(() => {
+//     setMounted(true);
+//   }, []);
+
+//   // Prevent rendering until the component is mounted
+//   if (!mounted) return null;
 
 //   return (
 //     <DropdownMenu>
@@ -36,11 +46,12 @@
 //         </DropdownMenuItem>
 //       </DropdownMenuContent>
 //     </DropdownMenu>
-//   )
+//   );
 // }
+
 "use client";
 
-import  React from "react";
+import React from "react";
 import { Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 
@@ -53,8 +64,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = React.useState(false); // Add a state to track client-side mounting
+  const { setTheme } = useTheme(); // Removed `theme` since it is unused
+  const [mounted, setMounted] = React.useState(false); // State to track client-side mounting
 
   // Ensure this runs only on the client
   React.useEffect(() => {

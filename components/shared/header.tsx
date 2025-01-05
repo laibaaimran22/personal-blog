@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Label } from '../ui/label'
+
 import Link from 'next/link'
 import { ThemeToggle } from '../theme-toggle'
 import useInvalidPaths from '@/lib/use-invalid-paths'
