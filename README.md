@@ -1,5 +1,5 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
+i have made a blog website using Sanity, CMS, ShadcnUI, Caching, React Hooks, Comment Section SEO and Schemas
 ## Getting Started
 
 First, run the development server:
